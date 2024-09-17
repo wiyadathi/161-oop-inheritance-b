@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuperHero
+public class SuperHero : MonoBehaviour
 {
     // Attributes
-    protected string name;
+    protected string _name;
     public string Name
     {
         get
         {
-            return name;
+            return _name;
         }
         set
         {
@@ -19,7 +19,7 @@ public class SuperHero
                 value = "N/A";
             }
 
-            name = value;
+            _name = value;
         }
     }
 
@@ -40,29 +40,20 @@ public class SuperHero
 
     private float armorStrenght;
 
-    // Constructor
-    public SuperHero(string newName, int newHp, string newSuitColor)
-    {
-        name = newName;
-        hp = newHp;
-        SuitColor = newSuitColor;
-        armorStrenght = 10;
-    }
-
     public void UpdateArmor(float newArmor)
     {
         armorStrenght += newArmor;
-        Debug.Log($"\t {name} update armor to {armorStrenght}");
+        Debug.Log($"\t {_name} update armor to {armorStrenght}");
     }
 
     public void TakeDamege(int inputDamage)
     {
         hp -= inputDamage;
-        Debug.Log($"\t{name} take damege({inputDamage}) => {name} HP:{hp}");
+        Debug.Log($"\t{_name} take damege({inputDamage}) => {_name} HP:{hp}");
 
         if (IsDead())
         {
-            Debug.Log($"\t{name} is DEAD..");
+            Debug.Log($"\t{_name} is DEAD..");
         }
     }
 

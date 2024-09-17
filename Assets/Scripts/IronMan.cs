@@ -1,20 +1,15 @@
 using UnityEngine;
 
-class IronMan : SuperHero
+public class IronMan : SuperHero
 {
-    public IronMan(string newName, int newHp, string newSuitColor) 
-        : base(newName, newHp, newSuitColor)
-    {
-    }
-
     // Behaviour
     public void Fly()
     {
-        Debug.Log($"\t {name}: is Fly");
+        Debug.Log($"\t {_name}: is Fly");
     }
 
     public void ShootLaser()
     {
-        Debug.Log($"\t {name}: is Shooting laser");
+        Debug.Log($"\t {_name}: is Shooting laser");
     }
 }

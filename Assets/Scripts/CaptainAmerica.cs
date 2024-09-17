@@ -1,19 +1,14 @@
 using UnityEngine;
 
-class CaptainAmerica : SuperHero
+public class CaptainAmerica : SuperHero
 {
-    public CaptainAmerica(string newName, int newHp, string newSuitColor)
-        : base(newName, newHp, newSuitColor)
-    {
-    }
-
     public void LeapAndJump()
     {
-        Debug.Log($"\t {name}: is LeapAndJump");
+        Debug.Log($"\t {_name}: is LeapAndJump");
     }
 
     public void ThrowShield()
     {
-        Debug.Log($"\t {name}: is ThrowShield");
+        Debug.Log($"\t {_name}: is ThrowShield");
     }
 }

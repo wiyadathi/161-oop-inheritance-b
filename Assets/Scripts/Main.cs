@@ -18,8 +18,8 @@ public class Main : MonoBehaviour
         Debug.Log($"IronMan name: {ironMan.Name}, HP: {ironMan.Hp}, color: {ironMan.SuitColor}");
         Debug.Log($"CaptainAmerica name: {captainAmerica.Name}, HP: {captainAmerica.Hp}, color: {captainAmerica.SuitColor}");
 
-        ironMan.UpdateAmrmor(5.25f);
-        captainAmerica.UpdateAmrmor(5.5f);
+        ironMan.UpdateArmor(5.25f);
+        captainAmerica.UpdateArmor(5.5f);
 
         for (int i = 0; i < 5; i++)
         {

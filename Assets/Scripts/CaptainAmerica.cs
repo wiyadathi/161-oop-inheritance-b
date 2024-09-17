@@ -9,10 +9,10 @@ class CaptainAmerica
     private float _armorStrenght;
 
     // Constructor
-    public CaptainAmerica(string newName, int setHp, string newSuitColor)
+    public CaptainAmerica(string newName, int newHp, string newSuitColor)
     {
         Name = newName;
-        Hp = setHp;
+        Hp = newHp;
         SuitColor = newSuitColor;
         _armorStrenght = 10;
     }
@@ -27,7 +27,7 @@ class CaptainAmerica
         Debug.Log($"\t {Name}: is ThrowShield");
     }
 
-    public void UpdateAmrmor(float newArmor)
+    public void UpdateArmor(float newArmor)
     {
         _armorStrenght += newArmor;
         Debug.Log($"\t {Name} update armor to {_armorStrenght}");
@@ -37,6 +37,7 @@ class CaptainAmerica
     {
         Hp -= inputDamage;
         Debug.Log($"\t{Name} take damege({inputDamage}) => {Name} HP:{Hp}");
+       
         if (IsDead())
         {
             Debug.Log($"\t{Name} is DEAD..");

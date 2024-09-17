@@ -10,6 +10,8 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ironMan.Name = "";
+
         // Show Attributes
         Debug.Log($"IronMan name: {ironMan.Name}, HP: {ironMan.Hp}, color: {ironMan.SuitColor}");
         Debug.Log($"CaptainAmerica name: {captainAmerica.Name}, HP: {captainAmerica.Hp}, color: {captainAmerica.SuitColor}");

@@ -9,11 +9,11 @@ class CaptainAmerica : SuperHero
 
     public void LeapAndJump()
     {
-        Debug.Log($"\t {Name}: is LeapAndJump");
+        Debug.Log($"\t {name}: is LeapAndJump");
     }
 
     public void ThrowShield()
     {
-        Debug.Log($"\t {Name}: is ThrowShield");
+        Debug.Log($"\t {name}: is ThrowShield");
     }
 }

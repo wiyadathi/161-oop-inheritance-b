@@ -5,39 +5,69 @@ using UnityEngine;
 public class SuperHero
 {
     // Attributes
-    public string Name;
-    public int Hp;
-    public string SuitColor;
-    private float _armorStrenght;
+    protected string name;
+    public string Name
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            if (value == null || value == "")
+            {
+                value = "N/A";
+            }
+
+            name = value;
+        }
+    }
+
+    protected int hp;
+    public int Hp
+    {
+        get
+        {
+            return hp;
+        }
+        set
+        {
+            hp = value;
+        }
+    }
+
+    public string SuitColor { get; protected set; }
+
+    private float armorStrenght;
 
     // Constructor
     public SuperHero(string newName, int newHp, string newSuitColor)
     {
-        Name = newName;
-        Hp = newHp;
+        name = newName;
+        hp = newHp;
         SuitColor = newSuitColor;
-        _armorStrenght = 10;
+        armorStrenght = 10;
     }
 
     public void UpdateArmor(float newArmor)
     {
-        _armorStrenght += newArmor;
-        Debug.Log($"\t {Name} update armor to {_armorStrenght}");
+        armorStrenght += newArmor;
+        Debug.Log($"\t {name} update armor to {armorStrenght}");
     }
 
     public void TakeDamege(int inputDamage)
     {
-        Hp -= inputDamage;
-        Debug.Log($"\t{Name} take damege({inputDamage}) => {Name} HP:{Hp}");
+        hp -= inputDamage;
+        Debug.Log($"\t{name} take damege({inputDamage}) => {name} HP:{hp}");
 
         if (IsDead())
         {
-            Debug.Log($"\t{Name} is DEAD..");
+            Debug.Log($"\t{name} is DEAD..");
         }
     }
 
     public bool IsDead()
     {
-        return (Hp <= 0);
+        return (hp <= 0);
     }
 }
